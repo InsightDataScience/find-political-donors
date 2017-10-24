@@ -64,12 +64,12 @@ Also, while there are many fields in the file that may be interesting, below are
 ### Input file considerations
 
 Here are some considerations to keep in mind:
-1. Because we are only interested in individual contributions, we only want records that have the field, `OTHER_ID`, set to null or empty. If the `OTHER_ID` field contains any other value, ignore the entire record and don't include it in any calculation
-2. If `TRANSACTION_DT` is an invalid date (e.g., empty, null, malformed), you should still take the record into consideration when outputting the results of `medianvals_by_zip.txt` but completely ignore the record when calculating values for `medianvals_by_date.txt`
+1. Because we are only interested in individual contributions, we only want records that have the field, `OTHER_ID`, set to empty. If the `OTHER_ID` field contains any other value, ignore the entire record and don't include it in any calculation
+2. If `TRANSACTION_DT` is an invalid date (e.g., empty, malformed), you should still take the record into consideration when outputting the results of `medianvals_by_zip.txt` but completely ignore the record when calculating values for `medianvals_by_date.txt`
 3. While the data dictionary has the `ZIP_CODE` occupying nine characters, for the purposes of the challenge, we only consider the first five characters of the field as the zip code
-4. If `ZIP_CODE` is an invalid zipcode (i.e., empty, null, fewer than five digits), you should still take the record into consideration when outputting the results of `medianvals_by_date.txt` but completely ignore the record when calculating values for `medianvals_by_zip.txt`
-5. If any lines in the input file contains empty or null cells in the `CMTE_ID` or `TRANSACTION_AMT` fields, you should ignore and skip the record and not take it into consideration when making any calculations for the output files
-6. Except for the considerations noted above with respect to `CMTE_ID`, `ZIP_CODE`, `TRANSACTION_DT`, `TRANSACTION_AMT`, `OTHER_ID`, data in any of the other fields (whether the data is valid, malformed, null or empty) should not affect your processing. That is, as long as the four previously noted considerations apply, you should process the record as if it was a valid, newly arriving transaction. (For instance, campaigns sometimes retransmit transactions as amendments, however, for the purposes of this challenge, you can ignore that distinction and treat all of the lines as if they were new)
+4. If `ZIP_CODE` is an invalid zipcode (i.e., empty, fewer than five digits), you should still take the record into consideration when outputting the results of `medianvals_by_date.txt` but completely ignore the record when calculating values for `medianvals_by_zip.txt`
+5. If any lines in the input file contains empty cells in the `CMTE_ID` or `TRANSACTION_AMT` fields, you should ignore and skip the record and not take it into consideration when making any calculations for the output files
+6. Except for the considerations noted above with respect to `CMTE_ID`, `ZIP_CODE`, `TRANSACTION_DT`, `TRANSACTION_AMT`, `OTHER_ID`, data in any of the other fields (whether the data is valid, malformed, or empty) should not affect your processing. That is, as long as the four previously noted considerations apply, you should process the record as if it was a valid, newly arriving transaction. (For instance, campaigns sometimes retransmit transactions as amendments, however, for the purposes of this challenge, you can ignore that distinction and treat all of the lines as if they were new)
 7. For the purposes of this challenge, you can assume the input file follows the data dictionary noted by the FEC for the 2015-current election years
 8. The transactions noted in the input file are not in any particular order, and in fact, can be out of order chronologically
 
@@ -172,7 +172,7 @@ If we were to pick the relevant fields from each line, here is what we would rec
 
 
 
-We would ignore the first record because the `OTHER_ID` field contains data and is not null and empty. Moving to the next record, we would write out the first line of `medianvals_by_zip.txt` to be:
+We would ignore the first record because the `OTHER_ID` field contains data and is not empty. Moving to the next record, we would write out the first line of `medianvals_by_zip.txt` to be:
 
 `C00177436|30004|384|1|384`
 
