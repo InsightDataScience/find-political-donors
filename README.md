@@ -243,7 +243,7 @@ The directory structure for your repo should look like this:
                     └── medianvals_by_zip.txt
                     └── medianvals_by_date.txt
 
-**Don't fork this repo*, and don't use this `README` instead of your own. The contents of `src` does not need a single file called `find_political_donors.py`, which is only an example. Instead, you should include your own source files and give them expressive names.
+**Don't fork this repo*, and don't use this `README` instead of your own. The content of `src` does not need to be a single file called `find_political_donors.py`, which is only an example. Instead, you should include your own source files and give them expressive names.
 
 ## Testing your directory structure and output format
 
@@ -285,7 +285,7 @@ Your submission must pass at least the provided test in order to pass the coding
 Here are some common questions we've received. If you have additional questions, please email us at `cc@insightdataengineering.com` and we'll answer your questions as quickly as we can (during PST business hours), and update this FAQ.
 
 ### Why are you asking us to assume the data is streaming in when creating the `medianvals_by_zip.txt` file but not when creating the `medianvals_by_date.txt` file? 
-As a data engineer, you may want to take into consideration future needs. For instance, the team working on the dashboard may want to re-use the streaming functionality used to create `medianvals_by_zip.txt` file in the future to show a running median and total dollar amount of contributions as they arrive in real-time. It might prove useful in assessing the success of a candidate's fundraising efforts at any moment in time. However, because some contributions often arrive later than others and significantly out of order, the final amounts aggregated in `medianvals_by_date.txt` also are useful to the campagin.
+As a data engineer, you may want to take into consideration future needs. For instance, the team working on the dashboard may want to re-use the streaming functionality used to create `medianvals_by_zip.txt` file in the future to show a running median and total dollar amount of contributions as they arrive in real-time. It might prove useful in assessing the success of a candidate's fundraising efforts at any moment in time. However, because some contributions often arrive later than others and significantly out of order, the final amounts aggregated in `medianvals_by_date.txt` also are useful to the campaign.
 
 
 ### Which Github link should I submit?
