@@ -267,7 +267,7 @@ On success:
 
 
 
-One test has been provided as a way to check your formatting and simulate how we will be running tests when you submit your solution. We urge you to write your own additional tests in your own programming language. `run_tests.sh` is only intended to alert you if the directory structure or output is incorrect.
+One test has been provided as a way to check your formatting and simulate how we will be running tests when you submit your solution. We urge you to write your own additional tests. `test_1` is only intended to alert you if the directory structure or output is incorrect.
 
 Your submission must pass at least the provided test in order to pass the coding challenge.
 
