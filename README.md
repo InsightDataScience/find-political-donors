@@ -143,7 +143,7 @@ If we were to pick the relevant fields from each line, here is what we would rec
     OTHER_ID: empty
 
     4.
-    CMTE_ID: C0017743
+    CMTE_ID: C00177436
     ZIP_CODE: 30750
     TRANSACTION_DT: 01312017
     TRANSACTION_AMT: 230
